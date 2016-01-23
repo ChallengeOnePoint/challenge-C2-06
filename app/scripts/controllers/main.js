@@ -13,7 +13,6 @@ angular.module('catstagramApp')
   	//
     Cats.getCats().then(function(cats){
       $scope.cats = cats;
-      console.log(cats);
     })
     $scope.openModal = function(id){
     	console.log(id);
