@@ -1,7 +1,7 @@
 <div class="row">
   <div ng-repeat="cat in cats" class="cat-container col s4">
   <div class="card small">
-      <div class="card-image waves-effect waves-block waves-light">
+      <div class="card-image waves-effect waves-block waves-light" ng-click="openModal($index)">
         <img src="/images/cats/{{cat.picture}}"
           data-target="cat_modal" class="modal-trigger">
       </div>
@@ -17,9 +17,12 @@
   </div>
 </div>
 
-<!-- Modal Structure -->
-<div id="cat_modal" class="modal">
-  <div class="modal-content">
-
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4>Kitten</h4>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+    </div>
   </div>
-</div>

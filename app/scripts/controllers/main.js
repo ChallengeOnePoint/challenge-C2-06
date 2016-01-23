@@ -10,9 +10,13 @@
 angular.module('catstagramApp')
   .controller('MainCtrl', function ($scope, Cats) {
     $scope.cats = {};
-
+  	//
     Cats.getCats().then(function(cats){
       $scope.cats = cats;
       console.log(cats);
     })
+    $scope.openModal = function(id){
+    	console.log(id);
+    	$('#modal1').openModal();
+    }
   });
