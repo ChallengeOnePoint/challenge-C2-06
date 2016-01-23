@@ -1,7 +1,5 @@
-<div class="row">
-  <flex-slider slide="cat in cats">
-    <li>
-        <img ng-src="{{cat.picture}}">
-    </li>
-  </flex-slider>
-</div>
+<flex-slider slide="cat in cats track by $index">
+  <li>
+    <img ng-src="/images/cats/{{cat.picture}}">
+  </li>
+</flex-slider>
