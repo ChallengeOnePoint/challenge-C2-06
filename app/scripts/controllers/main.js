@@ -8,10 +8,11 @@
  * Controller of the catstagramApp
  */
 angular.module('catstagramApp')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('MainCtrl', function ($scope, Cats) {
+    $scope.cats = {};
+
+    Cats.getCats().then(function(cats){
+      $scope.cats = cats;
+      console.log(cats);
+    })
   });
