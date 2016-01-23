@@ -15,7 +15,8 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'angular-flexslider'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -24,13 +25,14 @@ angular
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
+      .when('/slideshow', {
+        templateUrl: 'views/slideshow.html',
+        controller: 'SlideShowCtrl',
+        controllerAs: 'slideshow'
+      })
       .otherwise({
         redirectTo: '/'
       });
   });
 
-//Ok, should be forbidden...
-$(document).ready(function(){
-  $('.modal-trigger').leanModal();
-});
 
