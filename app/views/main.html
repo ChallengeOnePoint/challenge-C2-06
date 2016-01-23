@@ -2,15 +2,15 @@
   <div ng-repeat="cat in cats" class="cat-container col s4">
   <div class="card small">
       <div class="card-image waves-effect waves-block waves-light">
-        <img class="activator" src="/images/cats/{{cat.picture}}">
+        <img src="/images/cats/{{cat.picture}}">
       </div>
       <div class="card-content">
         <span class="card-title activator grey-text text-darken-4">{{cat.name}}</span>
-        <p><a href="#">More info</a></p>
+        <p><a class="activator" >More info</a></p>
       </div>
       <div class="card-reveal">
         <span class="card-title grey-text text-darken-4">{{cat.name}}<i class="material-icons right">close</i></span>
-        <p>{{cat.description}}</p>
+        <p>{{cat.name}} is a {{cat.gender}} and have {{cat.age}} years old</p>
       </div>
     </div>
   </div>
