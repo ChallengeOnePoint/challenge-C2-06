@@ -10,12 +10,17 @@
 angular.module('catstagramApp')
   .controller('MainCtrl', function ($scope, Cats) {
     $scope.cats = {};
+    $scope.flex_cats = [];
   	//
     Cats.getCats().then(function(cats){
       $scope.cats = cats;
     })
     $scope.openModal = function(id){
-    	console.log(id);
-    	$('#modal1').openModal();
+      var current_cat = $scope.cats[id];
+      $scope.flex_cats = $scope.cats;
+      $scope.flex_cats.splice(id, 1);
+      $scope.flex_cats.unshift(current_cat);
+
+    	$('#cat_modal').openModal();
     }
   });
