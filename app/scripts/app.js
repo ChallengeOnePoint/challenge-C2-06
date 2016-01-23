@@ -28,3 +28,9 @@ angular
         redirectTo: '/'
       });
   });
+
+//Ok, should be forbidden...
+$(document).ready(function(){
+  $('.modal-trigger').leanModal();
+});
+
