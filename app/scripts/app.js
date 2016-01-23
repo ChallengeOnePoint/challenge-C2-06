@@ -24,6 +24,11 @@ angular
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
+      .when('/slideshow', {
+        templateUrl: 'views/slideshow.html',
+        controller: 'SlideShowCtrl',
+        controllerAs: 'slideshow'
+      })
       .otherwise({
         redirectTo: '/'
       });
