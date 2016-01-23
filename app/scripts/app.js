@@ -29,8 +29,4 @@ angular
       });
   });
 
-//Ok, should be forbidden...
-$(document).ready(function(){
-  $('.modal-trigger').leanModal();
-});
 
