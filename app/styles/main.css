@@ -9,9 +9,11 @@ body {
   padding: 0;
 }
 
-.cat_flex {
-  height: 300px;
+.flexslider-container {
+  width: 50%;
+  margin: 10px auto;
 }
+
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
